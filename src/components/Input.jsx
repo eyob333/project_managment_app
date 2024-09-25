@@ -1,10 +1,11 @@
+import { forwardRef } from "react"
 
-function Input({name, type = 'text'}){
+const Input = forwardRef(function Input({name, type = 'text', TagType = 'input' }, ref){
 
-    return <>
-    <label htmlFor={name}> {name} </label>
-    <input type={type} name={name} id={name} />
-    </>
-}
+    return <div className="input">
+    <label ref={ref} htmlFor={name}> {name} </label>
+    <TagType ref={ref} type={type} name={name} id={name}  />
+    </div>
+})
 
 export default Input

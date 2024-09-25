@@ -1,9 +1,10 @@
 body{
   margin: 0;
-  padding-top: 4%;
+  padding-top: 0%;
   border: 0;
 }
-html,body{
+html{
+  /* overflow-x: hidden; */
   overflow: hidden;
 }
 
@@ -26,17 +27,19 @@ img{
 
 .navgation{
   text-align: center;
-  padding: 20px;
+  padding: 20px 0;
+
   background-color: rgb(40, 40, 39);
   border-top-right-radius: 20px;
-  height: 600px;
+  height: 100vh;
 }
 
 .navgation h1{
   color: white;
   font-weight: 600;
+  font-size: 1.8rem;
 }
-.navgation button{
+.main-btn{
   padding: 10px 20px;
   border-style: none;
   border-radius: 10px;
@@ -44,6 +47,52 @@ img{
   background-color: rgb(100, 93, 85);
   border-width: 0;
 }
+
+/* .navgation ul {
+  padding-top: 40px;
+  display: grid;
+  grid-template-columns: 100%;
+} */
+/* .navgation ul {
+  height: 40px;
+  margin-bottom: 10px;
+  background-color: transparent;
+  font-size: 1.2rem;
+} */
+
+.navgation ul{
+  /* margin: 0; */
+  padding: 0;
+  /* border: 0; */
+}
+
+.navgation li {
+  list-style-type: none;
+}
+li button{
+  padding: 10px 20px;
+  margin: 10px;
+  border-style: none;
+  border-radius: 10px;
+  color: rgb(193, 194, 197);
+  background: transparent;
+  border-width: 0;
+  width: 90%;
+  letter-spacing: 0.2rem;
+  transition: all ease 500ms;
+}
+ul li button{
+  font-size: 0.9rem;
+}
+ul li button:hover{
+  color: white;
+  background-color: rgb(53, 53, 53);
+}
+.navgation .active {
+  color: white;
+  background-color: rgb(53, 53, 53);
+}
+
 .work-space{
   padding: 14% 0;
   text-align: center;
@@ -56,39 +105,70 @@ img{
 }
 
 .work-space button{
+  margin-top: 5px;
   padding: 20px 40px;
   border-radius: 10px;
   border-style: none;
   color: rgb(169, 165, 159);
   background-color: rgb(66, 66, 66);
+  transition: all ease 500ms;
+}
+.work-space button:hover{
+  margin-top: 0;
+  font-size: 0.8rem;
+  letter-spacing: 0.4rem;
+  padding: 25px 45px;
+  background-color: rgb(108, 103, 103);
+  color:rgb(230, 233, 236)
+  
 }
 
-/* from componet css */
+/* NewProject componet css */
 
-form{
-  display: grid;
-  grid-template-rows: repeat(7, 40px);
-  grid-template-columns: 600px;
+.form{
   gap: 10px;
-  padding: 50px;
+  padding: 50px 150px 50px 0; 
 }
 
-form label {
-  padding-top: 20px;
-  height: fit-content;
-}
 
-.btn{
+.form menu{
   display: flex;
   justify-content: end;
 }
+menu li{
+  list-style-type: none;
+}
 
-.btn button {
+menu button {
   border: 1px none;
   border-radius: 10px;
   padding: 10px 20px;
   background-color: white;
 }
+
+.form div{
+  display: flex;
+  flex-direction: column;
+}
+
+/* input componet css */
+.input, textarea{
+  height: 90px;
+  padding: 20px;
+
+}
+
+.input label{
+  height: 60x;
+  font-family: Courier, monospace;
+}
+
+input{
+  height: 50px;
+  font-family: Courier, monospace;
+  font-weight: 600;
+}
+
 
 /* selection componet css */
 
@@ -123,4 +203,16 @@ form label {
 }
 .selection-task p{
   font-size: smaller;
+}
+
+dialog {
+  border-radius: 10px;
+  border-style: none;
+  
+}
+
+dialog::backdrop{
+  background-color: rgba(58, 61, 62, 0.5);
+  backdrop-filter: 0.2;
+
 }
